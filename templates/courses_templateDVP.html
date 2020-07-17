@@ -1,0 +1,101 @@
+<!-- Edit this file to change the layout of the detail view print preview page -->
+
+
+<div class="panel-heading"><h3 class="panel-title">
+	<strong><%%DETAIL_VIEW_TITLE%%></strong>
+	<div class="hidden-print pull-right">
+		<div class="btn-group">
+			<button type="button" id="print" onclick="window.print();" title="<%%TRANSLATION(Print)%%>" class="btn btn-primary"><i class="glyphicon glyphicon-print"></i> <%%TRANSLATION(Print)%%></button>
+			<button type="submit" id="back" title="<%%TRANSLATION(Cancel Printing)%%>" class="btn btn-default"><i class="glyphicon glyphicon-remove-circle"></i> <%%TRANSLATION(Cancel Printing)%%></button>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</h3></div>
+
+<div class="panel-body">
+	<fieldset class="form-horizontal">
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Institute</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="instituteNumber<%%RND1%%>"><%%COMBOTEXT(instituteNumber)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Name</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(courseName)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Course Code</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(courseCode)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Link</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><a id="link-link" href="link.php?t=courses&f=link&i=<%%VALUE(courseId)%%>" target="_blank"><i class="glyphicon glyphicon-globe" title="<%%VALUE(link)%%>" style="font-size: x-large;"></i></a><script>jQuery(function(){ /* */ var e_link = '<%%VALUE(link)%%>'; if(e_link == '' || e_link == '&nbsp;' || e_link == 'blank.gif') jQuery('#link-link').hide(); });</script></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Teacher</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="teacher<%%RND1%%>"><%%COMBOTEXT(teacher)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Subject</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="subjects<%%RND1%%>"><%%COMBOTEXT(subjects)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Description</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(description)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">File</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><a id="file-link" href="link.php?t=courses&f=file&i=<%%VALUE(courseId)%%>" target="_blank"><i class="glyphicon glyphicon-folder-open" title="<%%VALUE(file)%%>" style="font-size: x-large;"></i></a><script>jQuery(function(){ /* */ var e_file = '<%%VALUE(file)%%>'; if(e_file == '' || e_file == '&nbsp;' || e_file == 'blank.gif') jQuery('#file-link').hide(); });</script></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Amount</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(amount)%%></div>
+			</div>
+		</div>
+	</fieldset>
+</div>
+<!-- child records -->
+<div class="panel-body">
+	<div id="courses-children"></div>
+</div>
+
+<script>
+	$j(function(){
+		/* prevent loading child records in multiple DVP */
+		if($j('[id=courses-children]').length > 1) return;
+
+		post(
+			'parent-children.php', {
+				ParentTable: 'courses',
+				SelectedID: '<%%VALUE(courseId)%%>',
+				Operation: 'show-children-printable'
+			},
+			'courses-children',
+			'disable-element',
+			'loading-element',
+			apply_persisting_children
+		);
+
+		$j('form').on('click', '#children-tabs button[data-target]', function(){
+			$j(this).toggleClass('active');
+			persist_expanded_child($j(this).attr('id'));
+		});
+	})
+</script>
+

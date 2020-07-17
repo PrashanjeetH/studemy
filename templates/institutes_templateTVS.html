@@ -1,0 +1,22 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the  and  formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the institutes_init() hook (in hooks/institutes.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="institutes-instituteName-<%%VALUE(instituteNumber)%%>" class="institutes-instituteName"><%%VALUE(instituteName)%%></td>
+		<td id="institutes-instituteCode-<%%VALUE(instituteNumber)%%>" class="institutes-instituteCode"><%%VALUE(instituteCode)%%></td>
+		<td id="institutes-phone-<%%VALUE(instituteNumber)%%>" class="institutes-phone text-right"><%%VALUE(phone)%%></td>
+		<td id="institutes-email-<%%VALUE(instituteNumber)%%>" class="institutes-email"><%%VALUE(email)%%></td>
+		<td id="institutes-pincode-<%%VALUE(instituteNumber)%%>" class="institutes-pincode text-right"><%%VALUE(pincode)%%></td>
+		<td id="institutes-city-<%%VALUE(instituteNumber)%%>" class="institutes-city"><%%VALUE(city)%%></td>
+		<td id="institutes-state-<%%VALUE(instituteNumber)%%>" class="institutes-state"><%%VALUE(state)%%></td>
+		<td id="institutes-ownerName-<%%VALUE(instituteNumber)%%>" class="institutes-ownerName"><%%VALUE(ownerName)%%></td>
+		<td id="institutes-ownerPhone-<%%VALUE(instituteNumber)%%>" class="institutes-ownerPhone text-right"><%%VALUE(ownerPhone)%%></td>
+		<td id="institutes-ownerEmail-<%%VALUE(instituteNumber)%%>" class="institutes-ownerEmail"><%%VALUE(ownerEmail)%%></td>
+		<td id="institutes-adminName-<%%VALUE(instituteNumber)%%>" class="institutes-adminName"><%%VALUE(adminName)%%></td>
+		<td id="institutes-adminPhone-<%%VALUE(instituteNumber)%%>" class="institutes-adminPhone text-right"><%%VALUE(adminPhone)%%></td>
+		<td id="institutes-adminEmail-<%%VALUE(instituteNumber)%%>" class="institutes-adminEmail"><%%VALUE(adminEmail)%%></td>
+		<!--<td id="institutes-subjects-<%%VALUE(instituteNumber)%%>" class="institutes-subjects"><%%VALUE(subjects)%%></td>
+-->

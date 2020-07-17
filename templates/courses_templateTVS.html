@@ -1,0 +1,21 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the  and  formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the courses_init() hook (in hooks/courses.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="courses-instituteNumber-<%%VALUE(courseId)%%>" class="courses-instituteNumber"><%%VALUE(instituteNumber)%%></td>
+		<td id="courses-courseName-<%%VALUE(courseId)%%>" class="courses-courseName"><%%VALUE(courseName)%%></td>
+		<td id="courses-courseCode-<%%VALUE(courseId)%%>" class="courses-courseCode"><%%VALUE(courseCode)%%></td>
+		<td id="courses-link-<%%VALUE(courseId)%%>" class="courses-link"><a href="link.php?t=courses&f=link&i=<%%VALUE(courseId)%%>" target="_blank" title="<%%VALUE(link)%%>" class="btn btn-default"><i class="glyphicon glyphicon-globe text-info"></i></a></td>
+		<td id="courses-teacher-<%%VALUE(courseId)%%>" class="courses-teacher"><%%VALUE(teacher)%%></td>
+		<td id="courses-subjects-<%%VALUE(courseId)%%>" class="courses-subjects"><%%VALUE(subjects)%%></td>
+		<td id="courses-description-<%%VALUE(courseId)%%>" class="courses-description"><%%VALUE(description)%%></td>
+		<td id="courses-file-<%%VALUE(courseId)%%>" class="courses-file"><a href="link.php?t=courses&f=file&i=<%%VALUE(courseId)%%>" target="_blank" title="<%%VALUE(file)%%>" class="btn btn-default"><i class="glyphicon glyphicon-folder-open text-info"></i></a></td>
+		<td id="courses-amount-<%%VALUE(courseId)%%>" class="courses-amount text-right"><%%VALUE(amount)%%></td>
+		<td id="courses-dateUploaded-<%%VALUE(courseId)%%>" class="courses-dateUploaded"><%%VALUE(dateUploaded)%%></td>
+		<script>$j(function(){
+			var e_link = '<%%VALUE(link)%%>'; if(e_link == '' || e_link == '&nbsp;') $j(/*<*/ '#courses-link-<%%VALUE(courseId)%%>' /*>*/).html('');
+			var e_file = '<%%VALUE(file)%%>'; if(e_file == '' || e_file == '&nbsp;') $j(/*<*/ '#courses-file-<%%VALUE(courseId)%%>' /*>*/).html('');
+		});</script>

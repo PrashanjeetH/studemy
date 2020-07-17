@@ -1,0 +1,17 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the teachers_init() hook (in hooks/teachers.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="teachers-firstname-<%%VALUE(id)%%>" class="teachers-firstname"><%%SELECT%%><%%VALUE(firstname)%%><%%ENDSELECT%%></td>
+		<td id="teachers-middlename-<%%VALUE(id)%%>" class="teachers-middlename"><%%SELECT%%><%%VALUE(middlename)%%><%%ENDSELECT%%></td>
+		<td id="teachers-lastname-<%%VALUE(id)%%>" class="teachers-lastname"><%%SELECT%%><%%VALUE(lastname)%%><%%ENDSELECT%%></td>
+		<td id="teachers-instituteNumber-<%%VALUE(id)%%>" class="teachers-instituteNumber text-right"><%%SELECT%%><%%VALUE(instituteNumber)%%><%%ENDSELECT%%></td>
+		<td id="teachers-phone-<%%VALUE(id)%%>" class="teachers-phone text-right"><%%SELECT%%><%%VALUE(phone)%%><%%ENDSELECT%%></td>
+		<td id="teachers-email-<%%VALUE(id)%%>" class="teachers-email"><%%SELECT%%><%%VALUE(email)%%><%%ENDSELECT%%></td>
+		<td id="teachers-pincode-<%%VALUE(id)%%>" class="teachers-pincode text-right"><%%SELECT%%><%%VALUE(pincode)%%><%%ENDSELECT%%></td>
+		<td id="teachers-city-<%%VALUE(id)%%>" class="teachers-city"><%%SELECT%%><%%VALUE(city)%%><%%ENDSELECT%%></td>
+		<td id="teachers-state-<%%VALUE(id)%%>" class="teachers-state"><%%SELECT%%><%%VALUE(state)%%><%%ENDSELECT%%></td>
+		<td id="teachers-subjects-<%%VALUE(id)%%>" class="teachers-subjects"><%%SELECT%%><%%VALUE(subjects)%%><%%ENDSELECT%%></td>

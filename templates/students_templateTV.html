@@ -1,0 +1,20 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the students_init() hook (in hooks/students.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="students-instituteNumber-<%%VALUE(id)%%>" class="students-instituteNumber text-right"><%%SELECT%%><%%VALUE(instituteNumber)%%><%%ENDSELECT%%></td>
+		<td id="students-username-<%%VALUE(id)%%>" class="students-username"><%%SELECT%%><%%VALUE(username)%%><%%ENDSELECT%%></td>
+		<td id="students-password-<%%VALUE(id)%%>" class="students-password"><%%SELECT%%><%%VALUE(password)%%><%%ENDSELECT%%></td>
+		<td id="students-firstname-<%%VALUE(id)%%>" class="students-firstname"><%%SELECT%%><%%VALUE(firstname)%%><%%ENDSELECT%%></td>
+		<td id="students-middlename-<%%VALUE(id)%%>" class="students-middlename"><%%SELECT%%><%%VALUE(middlename)%%><%%ENDSELECT%%></td>
+		<td id="students-lastname-<%%VALUE(id)%%>" class="students-lastname"><%%SELECT%%><%%VALUE(lastname)%%><%%ENDSELECT%%></td>
+		<td id="students-gender-<%%VALUE(id)%%>" class="students-gender"><%%SELECT%%><%%VALUE(gender)%%><%%ENDSELECT%%></td>
+		<td id="students-email-<%%VALUE(id)%%>" class="students-email"><%%SELECT%%><%%VALUE(email)%%><%%ENDSELECT%%></td>
+		<td id="students-phone-<%%VALUE(id)%%>" class="students-phone text-right"><%%SELECT%%><%%VALUE(phone)%%><%%ENDSELECT%%></td>
+		<td id="students-dob-<%%VALUE(id)%%>" class="students-dob"><%%SELECT%%><%%VALUE(dob)%%><%%ENDSELECT%%></td>
+		<td id="students-signupDate-<%%VALUE(id)%%>" class="students-signupDate"><%%SELECT%%><%%VALUE(signupDate)%%><%%ENDSELECT%%></td>
+		<td id="students-city-<%%VALUE(id)%%>" class="students-city"><%%SELECT%%><%%VALUE(city)%%><%%ENDSELECT%%></td>
+		<td id="students-state-<%%VALUE(id)%%>" class="students-state"><%%SELECT%%><%%VALUE(state)%%><%%ENDSELECT%%></td>

@@ -1,0 +1,332 @@
+<!-- Edit this file to change the layout of the detail view form -->
+
+<a name="detail-view"></a>
+<div class="panel-heading"><h3 class="panel-title"><strong><%%DETAIL_VIEW_TITLE%%></strong></h3></div>
+
+<div class="panel-body" id="institutes_dv_container">
+	<!-- child links -->
+	<div class="row vspacer-md">
+		<div class="col-xs-12">
+			<input type="hidden" id="assessments_hclink" value="assessments_view.php?filterer_instituteNumber=<%%URLVALUE(instituteNumber)%%>&<%%EMBEDDED%%>">
+			<a class="hidden-xs btn btn-default btn-lg pull-right hidden hspacer-sm" href="courses_view.php?filterer_instituteNumber=<%%URLVALUE(instituteNumber)%%>&<%%EMBEDDED%%>" id="courses_link"><i class="glyphicon glyphicon-list-alt"></i> Courses</a>
+			<a class="visible-xs btn btn-default btn-lg btn-block hidden vspacer-sm" href="courses_view.php?filterer_instituteNumber=<%%URLVALUE(instituteNumber)%%>&<%%EMBEDDED%%>" id="xs_courses_link"><i class="glyphicon glyphicon-list-alt"></i> Courses</a>
+			<input type="hidden" id="courses_hclink" value="courses_view.php?filterer_instituteNumber=<%%URLVALUE(instituteNumber)%%>&<%%EMBEDDED%%>">
+			<input type="hidden" id="modules_hclink" value="modules_view.php?filterer_instituteNumber=<%%URLVALUE(instituteNumber)%%>&<%%EMBEDDED%%>">
+			<a class="hidden-xs btn btn-default btn-lg pull-right hidden hspacer-sm" href="students_view.php?filterer_instituteNumber=<%%URLVALUE(instituteNumber)%%>&<%%EMBEDDED%%>" id="students_link"><i class="glyphicon glyphicon-list-alt"></i> Students</a>
+			<a class="visible-xs btn btn-default btn-lg btn-block hidden vspacer-sm" href="students_view.php?filterer_instituteNumber=<%%URLVALUE(instituteNumber)%%>&<%%EMBEDDED%%>" id="xs_students_link"><i class="glyphicon glyphicon-list-alt"></i> Students</a>
+			<input type="hidden" id="students_hclink" value="students_view.php?filterer_instituteNumber=<%%URLVALUE(instituteNumber)%%>&<%%EMBEDDED%%>">
+			<a class="hidden-xs btn btn-default btn-lg pull-right hidden hspacer-sm" href="teachers_view.php?filterer_instituteNumber=<%%URLVALUE(instituteNumber)%%>&<%%EMBEDDED%%>" id="teachers_link"><i class="glyphicon glyphicon-list-alt"></i> Teachers</a>
+			<a class="visible-xs btn btn-default btn-lg btn-block hidden vspacer-sm" href="teachers_view.php?filterer_instituteNumber=<%%URLVALUE(instituteNumber)%%>&<%%EMBEDDED%%>" id="xs_teachers_link"><i class="glyphicon glyphicon-list-alt"></i> Teachers</a>
+			<input type="hidden" id="teachers_hclink" value="teachers_view.php?filterer_instituteNumber=<%%URLVALUE(instituteNumber)%%>&<%%EMBEDDED%%>">
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<hr class="hidden-xs hidden-sm">
+
+	<div class="row">
+		<!-- form inputs -->
+		<div class="col-md-8 col-lg-10" id="institutes_dv_form">
+			<fieldset class="form-horizontal">
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="instituteName" class="control-label col-lg-3">Name<span class="text-danger"><%%TRANSLATION(*)%%></span></label>
+					<div class="col-lg-9">
+						<input maxlength="100" type="text" class="form-control" name="instituteName" id="instituteName" value="<%%VALUE(instituteName)%%>" required>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="instituteCode" class="control-label col-lg-3">Institute Code<span class="text-danger"><%%TRANSLATION(*)%%></span></label>
+					<div class="col-lg-9">
+						<input maxlength="6" type="text" class="form-control" name="instituteCode" id="instituteCode" value="<%%VALUE(instituteCode)%%>" required><div class="text-danger vspacer-md" id="instituteCode-uniqueness-note" style="display: none;"><%%TRANSLATION(unique field error)%%></div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="phone" class="control-label col-lg-3">Phone</label>
+					<div class="col-lg-9">
+						<input maxlength="15" type="text" class="form-control" name="phone" id="phone" value="<%%VALUE(phone)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="email" class="control-label col-lg-3">Email</label>
+					<div class="col-lg-9">
+						<input maxlength="100" type="text" class="form-control" name="email" id="email" value="<%%VALUE(email)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="pincode" class="control-label col-lg-3">Pincode</label>
+					<div class="col-lg-9">
+						<input maxlength="7" type="text" class="form-control" name="pincode" id="pincode" value="<%%VALUE(pincode)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="city" class="control-label col-lg-3">City</label>
+					<div class="col-lg-9">
+						<input maxlength="20" type="text" class="form-control" name="city" id="city" value="<%%VALUE(city)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="state" class="control-label col-lg-3">State</label>
+					<div class="col-lg-9">
+						<input maxlength="20" type="text" class="form-control" name="state" id="state" value="<%%VALUE(state)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="ownerName" class="control-label col-lg-3">Owner Name</label>
+					<div class="col-lg-9">
+						<input maxlength="40" type="text" class="form-control" name="ownerName" id="ownerName" value="<%%VALUE(ownerName)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="ownerPhone" class="control-label col-lg-3">Owner Phone</label>
+					<div class="col-lg-9">
+						<input maxlength="20" type="text" class="form-control" name="ownerPhone" id="ownerPhone" value="<%%VALUE(ownerPhone)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="ownerEmail" class="control-label col-lg-3">Owner Email</label>
+					<div class="col-lg-9">
+						<input maxlength="100" type="text" class="form-control" name="ownerEmail" id="ownerEmail" value="<%%VALUE(ownerEmail)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="adminName" class="control-label col-lg-3">Admin Name</label>
+					<div class="col-lg-9">
+						<input maxlength="40" type="text" class="form-control" name="adminName" id="adminName" value="<%%VALUE(adminName)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="adminPhone" class="control-label col-lg-3">Admin Phone</label>
+					<div class="col-lg-9">
+						<input maxlength="20" type="text" class="form-control" name="adminPhone" id="adminPhone" value="<%%VALUE(adminPhone)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="adminEmail" class="control-label col-lg-3">Admin Email</label>
+					<div class="col-lg-9">
+						<input maxlength="100" type="text" class="form-control" name="adminEmail" id="adminEmail" value="<%%VALUE(adminEmail)%%>">
+					</div>
+				</div>
+
+				<!--<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="subjects" class="control-label col-lg-3">Subjects</label>
+					<div class="col-lg-9">
+						<input maxlength="1000" type="text" class="form-control" name="subjects" id="subjects" value="<%%VALUE(subjects)%%>">
+					</div>
+				</div>-->
+
+			</fieldset>
+		</div>
+
+		<!-- DV action buttons -->
+		<hr class="hidden-md hidden-lg">
+		<div class="col-md-4 col-lg-2" id="institutes_dv_action_buttons">
+			<div class="btn-toolbar">
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%UPDATE_BUTTON%%>
+				</div><p></p>
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%DESELECT_BUTTON%%>
+					<%%DVPRINT_BUTTON%%>
+					<%%DELETE_BUTTON%%>
+				</div><p></p>
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%INSERT_BUTTON%%>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- child records -->
+	<hr>
+	<div class="row">
+		<div class="col-lg-10 col-lg-offset-1">
+			<div id="institutes-children" class="children-tabs"></div>
+		</div>
+	</div>
+
+</div><!-- /div class="panel-body" -->
+	<script>
+		$j(function() {
+			var add_new_mode = (!$j('input[name=SelectedID]').val());
+			var embedded_mode = ($j('input[name=Embedded]').val() == 1);
+
+			/* auto-close embedded page? */
+			var autoclose_mode = ($j('input[name=AutoClose]').val() == 1);
+			var record_added_ok = (location.search.split('record-added-ok=').length == 2);
+			var record_updated_ok = (location.search.split('record-updated-ok=').length == 2);
+			if((record_added_ok || record_updated_ok) && embedded_mode && autoclose_mode){
+				setTimeout(studemy.closeParentModal, 2000);
+			}
+
+			/* enable DV action buttons to float on scrolling down the form */
+			enable_dvab_floating();
+
+			if(!(embedded_mode && studemy.mobileDevice())){
+				$j('select, input[type=text], textarea').not(':disabled').eq(0).focus();
+			}
+
+			$j('form').eq(0).change(function(){
+				if($j(this).data('already_changed')) return;
+				if($j('#deselect').length) $j('#deselect').removeClass('btn-default').addClass('btn-warning').get(0).lastChild.data = " <%%TRANSLATION(Cancel)%%>";
+				$j(this).data('already_changed', true);
+			});
+
+			$j('a[href="<%%TRANSLATION(ImageFolder)%%>"]').click(function(){ /* */ return false; });
+
+			if(embedded_mode){
+				/* hide links to children tables in embedded mode */
+				$j('.detail_view a[id$=_link]').remove();
+
+				/* append embedded mode to all links */
+				var append_embedded = function(){
+					$j('a[href]:not([href^="#"]):not([href^="javascript"]):not([href$="Embedded=1"]):not([href*="link.php?t="]):not([href^="mailto:"])').each(
+						function(){
+							$j(this).attr('href', $j(this).attr('href') + '&Embedded=1');
+						}
+					);
+				}
+				setTimeout(append_embedded, 500);
+				setTimeout(append_embedded, 1500);
+				setTimeout(append_embedded, 2500);
+				setTimeout(append_embedded, 3500);
+			}
+
+			/* when no record is selected ('add new' mode) */
+			if(add_new_mode){
+				/* hide links to children tables */
+				$j('.detail_view a[id$=_link]').remove();
+			}else{
+				post(
+					'parent-children.php', {
+						ParentTable: 'institutes',
+						SelectedID: '<%%VALUE(instituteNumber)%%>',
+						Operation: 'show-children'
+					},
+					'institutes-children'
+				);
+			}
+
+			if(!embedded_mode){
+				/* add a horizontal spacer to [add new parent] buttons that don't have a spacered element before them */
+				$j('.add_new_parent').prev(':not(.hspacer-md)').next().addClass('hspacer-md');
+
+				$j('.add_new_parent').click(function(){
+					var pt = $j(this).attr('id').replace(/_add_new$/, '');
+					modal_window({
+						url: pt + '_view.php?addNew_x=1&Embedded=1',
+						close: function(){
+							var field_id = $j('#' + pt + '_add_new').prevAll('input:hidden').eq(0).attr('id');
+							$j('#' + field_id + '-container').select2('focus').select2('focus');
+
+							/* if a new parent was added, select it */
+							var new_id = localStorage.getItem(pt + '_last_added_id');
+							if(new_id === null) return;
+
+							localStorage.clear(pt + '_last_added_id');
+							studemy.lookupText({
+								id: new_id,
+								table: 'institutes',
+								field: field_id,
+								callback: function(data) {
+									$j('#' + field_id + '-container').select2('data', data, true);
+								}
+							});
+						},
+						size: 'full',
+						title: $j(this).attr('title')
+					});
+				});
+			}
+
+			studemy.hideViewParentLinks();
+
+			$j('form').on('click', '.view_parent', function(){
+				var pt = $j(this).attr('id').replace(/_view_parent$/, '');
+				if($j(this).prevAll('input:hidden').length){
+					var parent_id = $j(this).prevAll('input:hidden').eq(0).val();
+				}else{
+					var parent_id = $j(this).prevAll().children('input:hidden').eq(0).val();
+				}
+
+				/* handle radio lookups */
+				if($j(this).prevAll('[type=radio]').length){
+					parent_id = $j(this).prevAll('[type=radio]').eq(0).val();
+				}
+
+				if(parent_id != '{empty_value}' && parent_id != undefined && parent_id != ''){
+					var parent_link = $j(this).parents('.form-group').children('label').data('parent_link');
+					switch(parent_link){
+						case 'view_parent_hidden':
+							break;
+						case 'view_parent_modal':
+							modal_window({
+								url: pt + '_view.php?Embedded=1&SelectedID=' + encodeURIComponent(parent_id),
+								close: function(){
+									var field_id = $j('#' + pt + '_view_parent').prevAll('input:hidden').eq(0).attr('id');
+									$j('#' + field_id + '-container').select2('focus').select2('focus');
+								},
+								size: 'full',
+								title: $j(this).attr('title')
+							});
+							break;
+						case 'view_parent_same_window':
+							window.location = pt + '_view.php?Embedded=' + (embedded_mode ? '1' : '') + '&SelectedID=' + encodeURIComponent(parent_id);
+							break;
+						case 'view_parent_new_window':
+							window.open(pt + '_view.php?SelectedID=' + encodeURIComponent(parent_id));
+							break;
+					}
+
+				}
+			});
+
+			enforce_uniqueness('institutes', 'instituteCode');
+
+			/* load admin tools for admin user */
+			if(!add_new_mode){
+				$j('body').append('<div id="admin-tools-appendix"></div>');
+				$j('#admin-tools-appendix').load(
+					'ajax_admin_tools.php?table=institutes&id=<%%URLVALUE(instituteNumber)%%>',
+					function(resp){
+						if(!resp.length) return;
+						$j.ajax('ajax_admin_tools.php?action=get_admin_tools_js&table=institutes&id=<%%URLVALUE(instituteNumber)%%>');
+					}
+				);
+			}
+
+			/* warn user if 'add new' clicked while unsaved changes exist */
+			$j('#addNew').click(function(){
+				if($j('#deselect.btn-warning').length){
+					return confirm('<%%TRANSLATION(discard changes confirm)%%>');
+				}
+			});
+
+		});
+	</script>

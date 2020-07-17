@@ -1,0 +1,2 @@
+select 8 from brand inner join product on brand.brand_id = product.product_id
+$row = mysqli_fetch_array($result)

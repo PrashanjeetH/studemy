@@ -1,0 +1,16 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the questions_init() hook (in hooks/questions.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="questions-courseId-<%%VALUE(id)%%>" class="questions-courseId"><%%SELECT%%><%%VALUE(courseId)%%><%%ENDSELECT%%></td>
+		<td id="questions-moduleId-<%%VALUE(id)%%>" class="questions-moduleId"><%%SELECT%%><%%VALUE(moduleId)%%><%%ENDSELECT%%></td>
+		<td id="questions-assessmentId-<%%VALUE(id)%%>" class="questions-assessmentId"><%%SELECT%%><%%VALUE(assessmentId)%%><%%ENDSELECT%%></td>
+		<td id="questions-question-<%%VALUE(id)%%>" class="questions-question"><%%SELECT%%><%%VALUE(question)%%><%%ENDSELECT%%></td>
+		<td id="questions-option1-<%%VALUE(id)%%>" class="questions-option1"><%%SELECT%%><%%VALUE(option1)%%><%%ENDSELECT%%></td>
+		<td id="questions-option2-<%%VALUE(id)%%>" class="questions-option2"><%%SELECT%%><%%VALUE(option2)%%><%%ENDSELECT%%></td>
+		<td id="questions-option3-<%%VALUE(id)%%>" class="questions-option3"><%%SELECT%%><%%VALUE(option3)%%><%%ENDSELECT%%></td>
+		<td id="questions-option4-<%%VALUE(id)%%>" class="questions-option4"><%%SELECT%%><%%VALUE(option4)%%><%%ENDSELECT%%></td>
+		<td id="questions-answer-<%%VALUE(id)%%>" class="questions-answer text-right"><%%SELECT%%><%%VALUE(answer)%%><%%ENDSELECT%%></td>

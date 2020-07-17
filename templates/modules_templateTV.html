@@ -1,0 +1,18 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the modules_init() hook (in hooks/modules.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="modules-instituteNumber-<%%VALUE(moduleId)%%>" class="modules-instituteNumber"><%%SELECT%%><%%VALUE(instituteNumber)%%><%%ENDSELECT%%></td>
+		<td id="modules-courseId-<%%VALUE(moduleId)%%>" class="modules-courseId"><%%SELECT%%><%%VALUE(courseId)%%><%%ENDSELECT%%></td>
+		<td id="modules-assessmentId-<%%VALUE(moduleId)%%>" class="modules-assessmentId"><%%SELECT%%><%%VALUE(assessmentId)%%><%%ENDSELECT%%></td>
+		<td id="modules-moduleName-<%%VALUE(moduleId)%%>" class="modules-moduleName"><%%SELECT%%><%%VALUE(moduleName)%%><%%ENDSELECT%%></td>
+		<td id="modules-link-<%%VALUE(moduleId)%%>" class="modules-link"><a href="link.php?t=modules&f=link&i=<%%VALUE(moduleId)%%>" target="_blank" title="<%%VALUE(link)%%>" class="btn btn-default"><i class="glyphicon glyphicon-globe text-info"></i></a></td>
+		<td id="modules-description-<%%VALUE(moduleId)%%>" class="modules-description"><%%SELECT%%><%%VALUE(description)%%><%%ENDSELECT%%></td>
+		<td id="modules-file-<%%VALUE(moduleId)%%>" class="modules-file"><a href="link.php?t=modules&f=file&i=<%%VALUE(moduleId)%%>" target="_blank" title="<%%VALUE(file)%%>" class="btn btn-default"><i class="glyphicon glyphicon-folder-open text-info"></i></a></td>
+		<script>$j(function(){
+			var e_link = '<%%VALUE(link)%%>'; if(e_link == '' || e_link == '&nbsp;') $j(/*<*/ '#modules-link-<%%VALUE(moduleId)%%>' /*>*/).html('');
+			var e_file = '<%%VALUE(file)%%>'; if(e_file == '' || e_file == '&nbsp;') $j(/*<*/ '#modules-file-<%%VALUE(moduleId)%%>' /*>*/).html('');
+		});</script>

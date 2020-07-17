@@ -1,0 +1,21 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the institutes_init() hook (in hooks/institutes.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="institutes-instituteName-<%%VALUE(instituteNumber)%%>" class="institutes-instituteName"><%%SELECT%%><%%VALUE(instituteName)%%><%%ENDSELECT%%></td>
+		<td id="institutes-instituteCode-<%%VALUE(instituteNumber)%%>" class="institutes-instituteCode"><%%SELECT%%><%%VALUE(instituteCode)%%><%%ENDSELECT%%></td>
+		<td id="institutes-phone-<%%VALUE(instituteNumber)%%>" class="institutes-phone text-right"><%%SELECT%%><%%VALUE(phone)%%><%%ENDSELECT%%></td>
+		<td id="institutes-email-<%%VALUE(instituteNumber)%%>" class="institutes-email"><%%SELECT%%><%%VALUE(email)%%><%%ENDSELECT%%></td>
+		<td id="institutes-pincode-<%%VALUE(instituteNumber)%%>" class="institutes-pincode text-right"><%%SELECT%%><%%VALUE(pincode)%%><%%ENDSELECT%%></td>
+		<td id="institutes-city-<%%VALUE(instituteNumber)%%>" class="institutes-city"><%%SELECT%%><%%VALUE(city)%%><%%ENDSELECT%%></td>
+		<td id="institutes-state-<%%VALUE(instituteNumber)%%>" class="institutes-state"><%%SELECT%%><%%VALUE(state)%%><%%ENDSELECT%%></td>
+		<td id="institutes-ownerName-<%%VALUE(instituteNumber)%%>" class="institutes-ownerName"><%%SELECT%%><%%VALUE(ownerName)%%><%%ENDSELECT%%></td>
+		<td id="institutes-ownerPhone-<%%VALUE(instituteNumber)%%>" class="institutes-ownerPhone text-right"><%%SELECT%%><%%VALUE(ownerPhone)%%><%%ENDSELECT%%></td>
+		<td id="institutes-ownerEmail-<%%VALUE(instituteNumber)%%>" class="institutes-ownerEmail"><%%SELECT%%><%%VALUE(ownerEmail)%%><%%ENDSELECT%%></td>
+		<td id="institutes-adminName-<%%VALUE(instituteNumber)%%>" class="institutes-adminName"><%%SELECT%%><%%VALUE(adminName)%%><%%ENDSELECT%%></td>
+		<td id="institutes-adminPhone-<%%VALUE(instituteNumber)%%>" class="institutes-adminPhone text-right"><%%SELECT%%><%%VALUE(adminPhone)%%><%%ENDSELECT%%></td>
+		<td id="institutes-adminEmail-<%%VALUE(instituteNumber)%%>" class="institutes-adminEmail"><%%SELECT%%><%%VALUE(adminEmail)%%><%%ENDSELECT%%></td>
+		<!--<td id="institutes-subjects-<%%VALUE(instituteNumber)%%>" class="institutes-subjects"><%%SELECT%%><%%VALUE(subjects)%%><%%ENDSELECT%%></td>-->

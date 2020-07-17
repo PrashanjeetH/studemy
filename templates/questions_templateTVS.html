@@ -1,0 +1,16 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the  and  formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the questions_init() hook (in hooks/questions.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="questions-courseId-<%%VALUE(id)%%>" class="questions-courseId"><%%VALUE(courseId)%%></td>
+		<td id="questions-moduleId-<%%VALUE(id)%%>" class="questions-moduleId"><%%VALUE(moduleId)%%></td>
+		<td id="questions-assessmentId-<%%VALUE(id)%%>" class="questions-assessmentId"><%%VALUE(assessmentId)%%></td>
+		<td id="questions-question-<%%VALUE(id)%%>" class="questions-question"><%%VALUE(question)%%></td>
+		<td id="questions-option1-<%%VALUE(id)%%>" class="questions-option1"><%%VALUE(option1)%%></td>
+		<td id="questions-option2-<%%VALUE(id)%%>" class="questions-option2"><%%VALUE(option2)%%></td>
+		<td id="questions-option3-<%%VALUE(id)%%>" class="questions-option3"><%%VALUE(option3)%%></td>
+		<td id="questions-option4-<%%VALUE(id)%%>" class="questions-option4"><%%VALUE(option4)%%></td>
+		<td id="questions-answer-<%%VALUE(id)%%>" class="questions-answer text-right"><%%VALUE(answer)%%></td>

@@ -1,0 +1,10 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the membership_cache_init() hook (in hooks/membership_cache.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="membership_cache-request-<%%VALUE(request)%%>" class="membership_cache-request"><%%SELECT%%><%%VALUE(request)%%><%%ENDSELECT%%></td>
+		<td id="membership_cache-request_ts-<%%VALUE(request)%%>" class="membership_cache-request_ts text-right"><%%SELECT%%><%%VALUE(request_ts)%%><%%ENDSELECT%%></td>
+		<td id="membership_cache-response-<%%VALUE(request)%%>" class="membership_cache-response"><%%SELECT%%><%%VALUE(response)%%><%%ENDSELECT%%></td>
